@@ -59,14 +59,6 @@ public class ui : MonoBehaviour
           PlayerPrefs.SetInt("level", 0);
           SceneManager.LoadScene("level0");
       }
-  public void ContinuePressed()
-      {
-          SceneManager.LoadScene("level" + PlayerPrefs.GetInt("level"));
-      }
-  public void AgainPressed()
-  {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-  }
   public void ComePressed()
       {
           SceneManager.LoadScene("Menu");
@@ -77,4 +69,8 @@ public class ui : MonoBehaviour
           Application.Quit();
           Debug.Log("Exit pressed!");
       }
+  public void OpenUrl(string url)
+  {
+    Application.OpenURL(url);
+  }
 }
