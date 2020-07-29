@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 using System;
 
 public class ui : MonoBehaviour
@@ -56,8 +55,14 @@ public class ui : MonoBehaviour
   }
   public void PlayPressed()
       {
-          PlayerPrefs.SetInt("level", 0);
-          SceneManager.LoadScene("level0");
+        if (PlayerPrefs.HasKey("started"))
+        {
+            FindObjectOfType<Fungus.SaveMenu>().Load();
+        }
+        else
+        {
+            SceneManager.LoadScene("level0");
+        };
       }
   public void ComePressed()
       {
