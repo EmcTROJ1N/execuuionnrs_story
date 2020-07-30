@@ -31,6 +31,9 @@ public class unityadd : MonoBehaviour
         if(Advertisement.IsReady())
         {
           Advertisement.Show("rewardedVideo");
+          int keys = PlayerPrefs.GetInt("keys");
+          keys += 10;
+          PlayerPrefs.SetInt("keys", keys);
         }
     }
     public void OnUnityAdsDidFinish (string placementId, ShowResult showResult) {
@@ -53,5 +56,6 @@ public class unityadd : MonoBehaviour
     public void del_keys()
     {
       PlayerPrefs.SetInt("keys", 0);
+      PlayerPrefs.DeleteKey("premium");
     }
 }

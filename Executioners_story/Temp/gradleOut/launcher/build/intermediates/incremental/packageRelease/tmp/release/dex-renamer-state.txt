@@ -1,0 +1,4 @@
+#Thu Jul 30 18:19:59 MSK 2020
+base.0=/home/omon/gits/execuuionnrs_story/Executioners_story/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

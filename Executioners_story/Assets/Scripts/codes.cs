@@ -14,7 +14,7 @@ public class codes : MonoBehaviour
     if (PlayerPrefs.GetInt("666") == 0)
     {
       int new_keys = PlayerPrefs.GetInt("keys");
-      new_keys += 666;
+      new_keys += 15;
       PlayerPrefs.SetInt("keys", new_keys);
       good.SetActive(true);
       PlayerPrefs.SetInt("666", 1);
@@ -24,19 +24,12 @@ public class codes : MonoBehaviour
     {
       Debug.Log("Такой код уже вводили!");
     }
-    if (code.text == "cheats")
-    {
-      int new_keys = PlayerPrefs.GetInt("keys");
-      new_keys += 100;
-      PlayerPrefs.SetInt("keys", new_keys);
-      good.SetActive(true);
-    }
     if (code.text == "23092005")
     {
     if (PlayerPrefs.GetInt("23092005") == 0)
     {
       int new_keys = PlayerPrefs.GetInt("keys");
-      new_keys += 100;
+      new_keys += 15;
       PlayerPrefs.SetInt("keys", new_keys);
       good.SetActive(true);
       PlayerPrefs.SetInt("23092005", 1);

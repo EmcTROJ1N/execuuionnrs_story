@@ -14,6 +14,11 @@ public class vibor : MonoBehaviour
     gg.SetActive(true);
     dialog.SetActive(false);
     }
+    else
+    {
+    gg.SetActive(false);
+    dialog.SetActive(true);
+    }
   }
   void Start()
   {
