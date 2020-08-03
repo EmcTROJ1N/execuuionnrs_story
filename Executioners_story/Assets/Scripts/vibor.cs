@@ -2,27 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
 
 public class vibor : MonoBehaviour
 {
   public GameObject dialog;
   public GameObject gg;
+  public DialogInput script;
   void Update()
   {
     if (PlayerPrefs.GetInt("keys") <= 0)
     {
     gg.SetActive(true);
     dialog.SetActive(false);
+    script.enabled = false;
     }
     else
     {
     gg.SetActive(false);
     dialog.SetActive(true);
+    script.enabled = true;
     }
   }
   void Start()
   {
-    //PlayerPrefs.SetInt("keys", 666);
+    //PlayerPrefs.SetInt("keys", 0);
   }
   public void plus20()
   {

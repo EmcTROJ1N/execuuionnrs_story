@@ -7,8 +7,6 @@ using System;
 
 public class ui : MonoBehaviour
 {
-  public Text deads;
-  public Text completes;
   public Text keys;
   public Image bg;
   public Sprite new_bg;
@@ -22,6 +20,9 @@ public class ui : MonoBehaviour
   public void posleslovie()
   {
     posle.SetActive(true);
+    int comp = PlayerPrefs.GetInt("completes");
+    comp++;
+    PlayerPrefs.SetInt("completes", comp);
   }
   public void key()
   {
@@ -35,12 +36,6 @@ public class ui : MonoBehaviour
         bg.sprite = good_bg;
       }
   }
-  public void statistic()
-  {
-      deads.text =  "Смертей: " + PlayerPrefs.GetInt("deads");
-      completes.text =  "Прохождений: " + PlayerPrefs.GetInt("completes");
-      Debug.Log(PlayerPrefs.GetInt("deads"));
-  }
   public void comp()
   {
     int complet = PlayerPrefs.GetInt("completes");
@@ -53,8 +48,12 @@ public class ui : MonoBehaviour
     deds += 1;
     PlayerPrefs.SetInt("deads", deds);
   }
-  public void PlayPressed()
+  public void PlayPressed(bool delete_savedata)
       {
+        if (delete_savedata)
+        {
+         PlayerPrefs.DeleteKey("started");
+        }
         if (PlayerPrefs.HasKey("started"))
         {
             FindObjectOfType<Fungus.SaveMenu>().Load();

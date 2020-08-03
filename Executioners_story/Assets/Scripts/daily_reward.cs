@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using System;
 
 public class daily_reward : MonoBehaviour
 {
@@ -13,11 +12,15 @@ public class daily_reward : MonoBehaviour
       if (!PlayerPrefs.HasKey("key_gift"))
       {
       PlayerPrefs.SetString("LastSession", DateTime.Now.ToString());
+      PlayerPrefs.SetString("FirstSession", DateTime.Now.ToString());
       }
       TimeSpan ts = DateTime.Now - DateTime.Parse(PlayerPrefs.GetString("LastSession"));
       if (ts.Days >= 1)
       {
         reward.SetActive(true);
+        int k_gifts = PlayerPrefs.GetInt("k_gifts");
+        k_gifts++;
+        PlayerPrefs.SetInt("k_gifts", k_gifts);
         int new_key = PlayerPrefs.GetInt("keys");
         new_key += 10;
         PlayerPrefs.SetInt("keys", new_key);

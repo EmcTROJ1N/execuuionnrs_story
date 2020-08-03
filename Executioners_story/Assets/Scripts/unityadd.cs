@@ -24,6 +24,9 @@ public class unityadd : MonoBehaviour
         if(Advertisement.IsReady() && !PlayerPrefs.HasKey("premium"))
         {
           Advertisement.Show("video");
+          int ads = PlayerPrefs.GetInt("adds");
+          ads++;
+          PlayerPrefs.SetInt("adds", ads);
         }
       }
     public void rew_add()
@@ -34,6 +37,9 @@ public class unityadd : MonoBehaviour
           int keys = PlayerPrefs.GetInt("keys");
           keys += 10;
           PlayerPrefs.SetInt("keys", keys);
+          int ads = PlayerPrefs.GetInt("adds");
+          ads++;
+          PlayerPrefs.SetInt("adds", ads);
         }
     }
     public void OnUnityAdsDidFinish (string placementId, ShowResult showResult) {

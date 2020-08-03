@@ -15,6 +15,10 @@ public class volume : MonoBehaviour {
 	void Start () {
 
         // Assign Audio Source component to control it
+        if (PlayerPrefs.HasKey("vol"))
+        {
+          PlayerPrefs.SetFloat("vol", 0.5f);
+        }
         musicVolume = PlayerPrefs.GetFloat("vol");
         audioSrc = GetComponent<AudioSource>();
 	}
@@ -23,7 +27,7 @@ public class volume : MonoBehaviour {
 	void Update () {
 
         // Setting volume option of Audio Source to be equal to musicVolume
-        audioSrc.volume = musicVolume;
+        audioSrc.volume = PlayerPrefs.GetFloat("vol");
 	}
 
     // Method that is called by slider game object
