@@ -12,7 +12,6 @@ public class ui : MonoBehaviour
   public Sprite new_bg;
   public Sprite good_bg;
   public GameObject posle;
-
   void Update()
   {
     key();

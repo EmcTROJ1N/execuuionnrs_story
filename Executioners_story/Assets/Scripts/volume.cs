@@ -15,7 +15,7 @@ public class volume : MonoBehaviour {
 	void Start () {
 
         // Assign Audio Source component to control it
-        if (PlayerPrefs.HasKey("vol"))
+        if (!PlayerPrefs.HasKey("vol"))
         {
           PlayerPrefs.SetFloat("vol", 0.5f);
         }

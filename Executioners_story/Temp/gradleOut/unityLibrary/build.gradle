@@ -25,7 +25,7 @@ android {
             abiFilters 'armeabi-v7a'
         }
         versionCode 1
-        versionName 'Pre-Rel 0.666'
+        versionName 'Rel V. 1.666'
         consumerProguardFiles 'proguard-unity.txt'
     }
 

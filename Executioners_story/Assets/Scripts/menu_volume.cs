@@ -26,9 +26,4 @@ public class menu_volume : MonoBehaviour
       punc.value = PlayerPrefs.GetFloat("punctation_speed");
       saydialog_script.punctuationPause = PlayerPrefs.GetFloat("punctation_speed");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
 }

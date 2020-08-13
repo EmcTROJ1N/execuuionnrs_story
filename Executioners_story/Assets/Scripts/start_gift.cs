@@ -42,7 +42,7 @@ public class start_gift : MonoBehaviour
           k_gifts++;
           PlayerPrefs.SetInt("k_gifts", k_gifts);
           int k = PlayerPrefs.GetInt("keys");
-          k += 10;
+          k += 20;
           PlayerPrefs.SetInt("keys", k);
           PlayerPrefs.SetInt("key_gift", 1);
         }

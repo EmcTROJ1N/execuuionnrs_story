@@ -9,25 +9,12 @@ namespace Fungus
     /// <summary>
     /// Supported modes for clicking through a Say Dialog.
     /// </summary>
-    public enum ClickMode
-    {
-        /// <summary> Clicking disabled. </summary>
-        Disabled,
-        /// <summary> Click anywhere on screen to advance. </summary>
-        ClickAnywhere,
-        /// <summary> Click anywhere on Say Dialog to advance. </summary>
-        ClickOnDialog,
-        /// <summary> Click on continue button to advance. </summary>
-        ClickOnButton
-    }
 
     /// <summary>
     /// Input handler for say dialogs.
     /// </summary>
     public class DialogInput : MonoBehaviour
     {
-        [Tooltip("Click to advance story")]
-        [SerializeField] protected ClickMode clickMode;
 
         [Tooltip("Delay between consecutive clicks. Useful to prevent accidentally clicking through story.")]
         [SerializeField] protected float nextClickDelay = 0f;
@@ -45,6 +32,9 @@ namespace Fungus
         protected float ignoreClickTimer;
 
         protected StandaloneInputModule currentStandaloneInputModule;
+
+        // Modes: {"Disabled", "ClickAnywhere", "ClickOnDialog", "ClickOnButton"};
+        public string mode = "Disabled";
 
         protected Writer writer;
 
@@ -71,7 +61,7 @@ namespace Fungus
                 }
             }
         }
-            
+
         protected virtual void Update()
         {
             if (EventSystem.current == null)
@@ -93,17 +83,17 @@ namespace Fungus
                 }
             }
 
-            switch (clickMode)
+            switch (mode)
             {
-            case ClickMode.Disabled:
+            case "Disabled":
                 break;
-            case ClickMode.ClickAnywhere:
+            case "ClickAnywhere":
                 if (Input.GetMouseButtonDown(0))
                 {
                     SetNextLineFlag();
                 }
                 break;
-            case ClickMode.ClickOnDialog:
+            case "ClickOnDialog":
                 if (dialogClickedFlag)
                 {
                     SetNextLineFlag();
@@ -120,7 +110,7 @@ namespace Fungus
             if (ignoreMenuClicks)
             {
                 // Ignore input events if a Menu is being displayed
-                if (MenuDialog.ActiveMenuDialog != null && 
+                if (MenuDialog.ActiveMenuDialog != null &&
                     MenuDialog.ActiveMenuDialog.IsActive() &&
                     MenuDialog.ActiveMenuDialog.DisplayedOptionsCount > 0)
                 {
@@ -165,7 +155,7 @@ namespace Fungus
             ignoreClickTimer = nextClickDelay;
 
             // Only applies in Click On Dialog mode
-            if (clickMode == ClickMode.ClickOnDialog)
+            if (mode == "ClickOnDialog")
             {
                 dialogClickedFlag = true;
             }
@@ -177,7 +167,7 @@ namespace Fungus
         public virtual void SetButtonClickedFlag()
         {
             // Only applies if clicking is not disabled
-            if (clickMode != ClickMode.Disabled)
+            if (mode != "Disabled")
             {
                 SetNextLineFlag();
             }

@@ -8,13 +8,14 @@ public class disable_saydialog : MonoBehaviour
     public DialogInput script;
     public void tumbler_saydialog()
     {
-      if (script.enabled)
+      switch (script.mode)
       {
-        script.enabled = false;
-      }
-      else
-      {
-        script.enabled = true;
+        case "Disabled":
+        script.mode = "ClickAnywhere";
+        break;
+        case "ClickAnywhere":
+        script.mode = "Disabled";
+        break;
       }
     }
 

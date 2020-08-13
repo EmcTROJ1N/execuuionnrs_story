@@ -155,35 +155,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11240}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 11668}
+      Script: {instanceID: 11666}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11674}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11744}
     - Class: 114
-      Script: {instanceID: 11840}
+      Script: {instanceID: 11838}
     - Class: 114
-      Script: {instanceID: 11856}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 11894}
+      Script: {instanceID: 11892}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11986}
     - Class: 114
-      Script: {instanceID: 12020}
+      Script: {instanceID: 12018}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12042}
+      Script: {instanceID: 12040}
     - Class: 114
-      Script: {instanceID: 12088}
+      Script: {instanceID: 12086}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 12214}
+    - Class: 114
+      Script: {instanceID: 12222}
     - Class: 114
       Script: {instanceID: 12232}
     - Class: 114
@@ -281,9 +283,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15956}
     - Class: 114
-      Script: {instanceID: 23784}
-    - Class: 114
-      Script: {instanceID: 100410}
+      Script: {instanceID: 44094}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -336,33 +336,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11240}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11668}
+      Script: {instanceID: 11666}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11674}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11744}
     - Class: 114
-      Script: {instanceID: 11856}
+      Script: {instanceID: 11854}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11936}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 11960}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11986}
     - Class: 114
-      Script: {instanceID: 12020}
+      Script: {instanceID: 12018}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12024}
     - Class: 114
-      Script: {instanceID: 12042}
+      Script: {instanceID: 12040}
     - Class: 114
-      Script: {instanceID: 12088}
+      Script: {instanceID: 12086}
+    - Class: 114
+      Script: {instanceID: 12222}
     - Class: 114
       Script: {instanceID: 12230}
     - Class: 114
@@ -439,8 +441,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15816}
     - Class: 114
       Script: {instanceID: 15876}
-    - Class: 114
-      Script: {instanceID: 23784}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -526,12 +526,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.Advertisements.dll
     namespaceName: UnityEngine.Advertisements.Platform.Editor
     className: BannerPlaceholder
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: peremotka
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -972,6 +966,12 @@ ScriptsOnlyBuild:
     className: Comment
   - hash:
       serializedVersion: 2
+      Hash: a08485b033fdcb683b79247254494ec3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: statistic
+  - hash:
+      serializedVersion: 2
       Hash: 603d1e2d9ad933c45bfc883c509ee068
     assemblyName: Fungus.dll
     namespaceName: Fungus
@@ -1392,7 +1392,7 @@ ScriptsOnlyBuild:
     className: ObjectVariable
   - hash:
       serializedVersion: 2
-      Hash: c137bb26ac4385a84db1a563e6a39715
+      Hash: a1dd4e13b8c3a38f50d50537e47c083d
     assemblyName: Fungus.dll
     namespaceName: Fungus
     className: DialogInput
@@ -2722,12 +2722,6 @@ ScriptsOnlyBuild:
     assemblyName: Fungus.dll
     namespaceName: Fungus
     className: MoveLean
-  - hash:
-      serializedVersion: 2
-      Hash: a08485b033fdcb683b79247254494ec3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: statistic
   platform: 13
   scenePathNames:
   - Assets/Scenes/Menu.unity
