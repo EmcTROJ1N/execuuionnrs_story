@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Aug 13 17:14:46 MSK 2020
+#Mon Aug 17 19:09:26 MSK 2020
 60.set=ASSET
 52.set=ASSET
 53.base=/home/omon/gits/execuuionnrs_story/Executioners_story/Temp/gradleOut/launcher/build/intermediates/merged_assets/release/out
